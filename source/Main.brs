@@ -23,7 +23,10 @@ sub Main()
   m.discoveryEventsManager = createObject("roSGNode", "DiscoveryEventsManager")
   ' m.discoveryEventsManager.appContext = m.top.appContext
 
+  payload = {}
   while(true)
+    sendDiscoveryEvent(payload)
+
     msg = wait(0, m.port)
     msgType = type(msg)
     if msgType = "roSGScreenEvent"
@@ -34,7 +37,7 @@ end sub
 
 
 function onGlobalEventHandler() as void
-  print "fired event"
+  print "onGlobalEventHandler"
     '  Refresh token error events'
     'if m.global.event.type = "temporaryRefreshTokenError"
     '    ' Remove the loading screen
@@ -76,6 +79,19 @@ function onGlobalEventHandler() as void
 end function
 
 function onDiscoveryEventHandler(event)
+  print "onGlobalEventHandler"
     ' Let the Discovery Event Manager know that we've received an event
     m.discoveryEventsManager.event = event
+end function
+
+function sendDiscoveryEvent(payload as dynamic) as void
+  print 'sendDiscoveryEvent'
+
+    ' Nothing to do here
+    if payload = invalid then return
+    m.global.event = {
+        type: constants().DISCOVERY_EVENTS.TYPE,
+        timestamp: timeHelper().getRFC3339Timestamp(),
+        data: payload
+    }
 end function
