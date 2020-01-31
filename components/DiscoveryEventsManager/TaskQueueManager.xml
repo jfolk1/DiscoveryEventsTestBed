@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="TaskQueueManager" extends="node">
+
+    <interface>
+        <!-- Input -->
+        <field id="task" type="assocarray" />
+        <field id="appContext" type="assocarray" />
+    </interface>
+
+    <script type="text/brightscript" uri="TaskQueueManager.brs" />
+
+</component>

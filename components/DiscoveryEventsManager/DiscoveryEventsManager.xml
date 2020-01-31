@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="DiscoveryEventsManager" extends="Group">
+    <interface>
+        <field id="appContext" type="assocarray" onChange="onAppContextChanged" />
+        <field id="event" type="assocarray" />
+    </interface>
+
+    <script type="text/brightscript" uri="constants.brs" />
+    <script type="text/brightscript" uri="fetch.brs" />
+    <script type="text/brightscript" uri="registry.brs" />
+    <script type="text/brightscript" uri="application-state.brs" />
+    <script type="text/brightscript" uri="discovery-session.brs" />
+    <script type="text/brightscript" uri="array.brs" />
+    <script type="text/brightscript" uri="time.brs" />
+    <script type="text/brightscript" uri="language.brs" />
+    <script type="text/brightscript" uri="log.brs" />
+    <script type="text/brightscript" uri="DiscoveryEventsManager.brs" />
+</component>

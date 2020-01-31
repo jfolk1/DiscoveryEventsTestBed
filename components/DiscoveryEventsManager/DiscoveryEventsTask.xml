@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="DiscoveryEventsTask" extends="Task">
+
+    <interface>
+        <!-- Input -->
+        <field id="runFunction" type="assocarray" />
+        <field id="appContext" type="assocarray" />
+    </interface>
+
+    <!-- importing DiscoveryEventsTask handler -->
+    <script type="text/brightscript" uri="auth/access-token.brs" />
+    <script type="text/brightscript" uri="api.brs" />
+    <script type="text/brightscript" uri="auth/auth.brs" />
+    <script type="text/brightscript" uri="fetch.brs" />
+    <script type="text/brightscript" uri="hateoas.brs" />
+    <script type="text/brightscript" uri="language.brs" />
+    <script type="text/brightscript" uri="log.brs" />
+    <script type="text/brightscript" uri="object.brs" />
+    <script type="text/brightscript" uri="registry.brs" />
+    <script type="text/brightscript" uri="system.brs" />
+    <script type="text/brightscript" uri="time.brs" />
+    <script type="text/brightscript" uri="url.brs" />
+    <script type="text/brightscript" uri="utils.brs" />
+    <script type="text/brightscript" uri="discovery-events.brs" />
+    <script type="text/brightscript" uri="DiscoveryEventsTask.brs" />
+
+</component>
